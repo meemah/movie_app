@@ -26,10 +26,12 @@ class MovieDetailView extends StatelessWidget {
               height: MediaQuery.of(context).size.height * 0.75,
             ),
             kSizedBoxH10,
-            YellowText(
-              text: movieItem.title,
-              fontSize: 26,
-              fontWeight: FontWeight.bold,
+            Center(
+              child: YellowText(
+                text: movieItem.title,
+                fontSize: 26,
+                fontWeight: FontWeight.bold,
+              ),
             ),
             kSizedBoxH10,
             Padding(
