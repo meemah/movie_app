@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:http/http.dart' as http;
+import 'package:movie_app/api_key.dart';
 import 'package:movie_app/networking/custom_exceptions.dart';
 
 class ApiClient {
@@ -19,7 +20,7 @@ class ApiClient {
     var responseJson;
     try {
       final response = await http.get(_url, headers: {
-        "x-rapidapi-key": "6b69702c3emshe7e9db4897a9311p1ea77cjsn302812f8b301",
+        "x-rapidapi-key": api_key,
         'x-rapidapi-host': 'unogs-unogs-v1.p.rapidapi.com'
       });
       responseJson = _returnResponse(response);
